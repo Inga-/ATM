@@ -7,7 +7,7 @@ import com.it.source.atm.logic.ATMLogic;
 import org.junit.Before;
 import org.junit.Test;
 
-public class testsCheckCounterfeit {
+public class TestsCheckCounterfeit {
 
 	ATMLogic logic;
 
