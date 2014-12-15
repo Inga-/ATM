@@ -1,27 +1,28 @@
 package com.it.source.atm.collections;
 
-public class Box<T> {
-    private T arr[];
+import com.it.source.atm.interfaces.IBox;
+import com.it.source.atm.moneys.*;
+
+public class Box implements IBox {
+    private Money arr[];
     private int i;
     
-    @SuppressWarnings("unchecked")
     public Box() {
-        arr = (T[]) new Object[4];
+        arr = new Money[4];
     }
     
-    public void add(T t) {
+    public void add(Money m) {
         if (i >= arr.length) {
-            @SuppressWarnings("unchecked")
-            T[] tmp = (T[]) new Object[arr.length * 2];
+            Money tmp [] = new Money[arr.length * 2];
             for (int j = 0; j < arr.length; j++){ 
             	tmp[j] = arr[j];
             }
             arr = tmp;
         }
-        arr[i++] = t;
+        arr[i++] = m;
     }
     
-    public T get() {
+    public Money get() {
         if (i == 0)
             return null;
         

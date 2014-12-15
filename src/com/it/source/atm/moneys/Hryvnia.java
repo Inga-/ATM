@@ -1,22 +1,17 @@
 package com.it.source.atm.moneys;
 
-public class Hryvnia {
+public class Hryvnia extends Money {
 	private int par[] = {1,2,5,10,20,50,100,200,500};
-	private int value;
 	
-	public Hryvnia (int value){
-		this.value = value;
-	}
- 
-	public int getValue(){
-		return value;
+	public Hryvnia (int v){
+		super(v);
 	}
 	
-	public int[] getPar() {
+	public int[] getPar(){
         return par;
     }
 	
 	public String toString(){
-		return "Украинская гривна номинал" + getValue();
+		return "Ukrainian hryvnia" + getValue();
 	}
 }
